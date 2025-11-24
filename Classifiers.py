@@ -142,10 +142,6 @@ class ClassifierPerceptron(Classifier):
     
     
 
-# ------------------------ A COMPLETER :
-
-# Remarque : quand vous transférerez cette classe dans le fichier classifieur.py 
-# de votre librairie, il faudra enlever "classif." en préfixe de la classe ClassifierPerceptron:
 
 class ClassifierPerceptronBiais(ClassifierPerceptron):
     """ Perceptron de Rosenblatt avec biais
@@ -162,7 +158,7 @@ class ClassifierPerceptronBiais(ClassifierPerceptron):
         """
         # Appel du constructeur de la classe mère
         super().__init__(input_dimension, learning_rate, init)
-        # Affichage pour information (décommentez pour la mise au point)
+
         # print("Init perceptron biais: w= ",self.w," learning rate= ",learning_rate)
         
     def train_step(self, desc_set, label_set):
@@ -194,7 +190,6 @@ class ClassifierKNN(Classifier):
         Cette classe hérite de la classe Classifier
     """
 
-    # ATTENTION : il faut compléter cette classe avant de l'utiliser !
     
     def __init__(self, input_dimension, k):
         """ Constructeur de Classifier
@@ -453,9 +448,7 @@ class NoeudCategoriel:
         if self.Les_fils == None:
             self.Les_fils = dict()
         self.Les_fils[valeur] = Fils
-        # Rem: attention, on ne fait aucun contrôle, la nouvelle association peut
-        # écraser une association existante.
-    
+
     def ajoute_feuille(self,classe):
         """ classe: valeur de la classe
             Ce noeud devient un noeud feuille
@@ -624,8 +617,7 @@ class NoeudGenerique:
         if self.Les_fils == None:
             self.Les_fils = dict()
         self.Les_fils[valeur] = Fils
-        # Rem: attention, on ne fait aucun contrôle, la nouvelle association peut
-        # écraser une association existante.
+
     
     def ajoute_feuille(self,classe):
         """ classe: valeur de la classe
